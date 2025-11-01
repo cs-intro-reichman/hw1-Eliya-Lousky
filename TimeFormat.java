@@ -2,19 +2,19 @@
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class TimeFormat {
 	public static void main(String[] args) {
 		
 		String hhmm = (args[0]);
+
+          LocalTime t = LocalTime.parse(args[0], DateTimeFormatter.ofPattern("H:mm"));
+       
+          String out = t.format(DateTimeFormatter.ofPattern("h:mm a", Locale.ENGLISH));
+        
+          System.out.println(out); 
     
-        LocalTime time = LocalTime.parse(hhmm, DateTimeFormatter.ofPattern("H:m"));
-
-      
-        DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("hh:mm a");
-
-      
-        System.out.println(time.format(outputFormat));
     }
 		
 	}

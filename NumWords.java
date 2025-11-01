@@ -8,7 +8,7 @@ public class NumWords {
 	   int ones = number % 10;
 	   
 
-	   System.out.println(hundreds + " hundreds, " + tens + " tens, " + "and" + ones + " ones.");
+	  System.out.println(hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");
 
 	}
 }
