@@ -9,7 +9,7 @@ public class Ascend {
 		int b =(int)(Math.random()*lim);
 		int c = (int)(Math.random()*lim);
 
-		System.out.println(a + " "+ b + " " + c );
+		System.out.println(a + " " + b + " " + c );
 
 
 		int max = Math.max(a, Math.max(b , c));
