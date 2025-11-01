@@ -8,10 +8,10 @@ public class Bill3 {
 
 		int bill = Integer.parseInt(args[3]);
 
-	  double each = Math.ceil(bill / 3);
+	  double each = Math.ceil(bill / 3.0);
 
+		System.out.printf("Dear %s, %s, and %s: pay %.1f shekels each%n", name3, name2, name1, each);
 
-		System.out.println("Dear " + name3 + "," + name2 + "and" + name1 + " pay" + each  + " Shekels each");
-			    // Replace this comment with the rest of your code   
+	
 	}
 }
