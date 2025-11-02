@@ -16,7 +16,9 @@ public class TimeFormat {
     
       
         System.out.print(h + ":");
-        if (m < 10) System.out.print("0");
+        if (m < 10){
+             System.out.print("0");
+            }
         System.out.print(m + " " + period + "\n");
     }
 }
