@@ -11,7 +11,8 @@ public class Bill3 {
 
 		  double each = Math.ceil(bill / 3.0);
 
-		System.out.println("Dear %s, %s, and %s: pay %.1f shekels each%n", name3, name2, name1, each);
+		System.out.println("Dear " + name1 + ", " + name2 + ", " + "and " + name3 +": pay" + each +" Shekrls each.");
+		
 
 	
 	}

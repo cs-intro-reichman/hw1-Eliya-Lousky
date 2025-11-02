@@ -1,20 +1,26 @@
-// Represents the hh:mm time format using an AM/PM format. 
-
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 public class TimeFormat {
 	public static void main(String[] args) {
 		
-		String hhmm = (args[0]);
+	     String  time = args[0]; 
+     
+        int h = Integer.parseInt("" + time.charAt(0) + time.charAt(1));
+        int m = Integer.parseInt("" + time.charAt(3) + time.charAt(4));
 
-          LocalTime t = LocalTime.parse(args[0], DateTimeFormatter.ofPattern("H:mm"));
-       
-          String out = t.format(DateTimeFormatter.ofPattern("h:mm a", Locale.ENGLISH));
-        
-          System.out.println(out); 
+        String period = (h < 12) ? "AM" : "PM";
+      
+        h = h % 12;
+        if (h == 0) {
+            h = 12;
+        }
     
+      
+        System.out.print(h + ":");
+        if (m < 10) System.out.print("0");
+        System.out.print(m + " " + period + "\n");
     }
-		
-	}
+}
+
+    
+
+    
