@@ -1,37 +1,34 @@
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
+// Represents the hh:mm time format using an AM/PM format. 
 public class TimeFormat {
 	public static void main(String[] args) {
-	   String hourFormat = args[0];
-
-      
-        int hourDigits = Integer.parseInt("" + hourFormat.charAt(0) + hourFormat.charAt(1));
-        int minDigits = Integer.parseInt("" + hourFormat.charAt(3) + hourFormat.charAt(4));
-
-       
-        int newFormatHour = hourDigits % 12;
-        if (newFormatHour == 0) {
-            newFormatHour = 12;
-        }
-
-      
-        String newFormatMin;
-        if (minDigits < 10) {
-            newFormatMin = "0" + minDigits;
+		String time = (args[0]);
+		
+        int hour12;
+		String suffix;
+		
+        int hours = Integer.parseInt("" + time.charAt(0) + time.charAt(1));
+		
+		int minutes = Integer.parseInt("" +time.charAt(3) + time.charAt(4));
+		 
+        if (hours < 12) {
+            suffix = "AM";
         } else {
-            newFormatMin = "" + minDigits;
+            suffix = "PM";
         }
-
-     
-        System.out.print(newFormatHour + ":" + newFormatMin);
-
-        
-        if (hourDigits >= 12) {
-            System.out.println(" PM");
+		if (hours == 0) {
+            hour12 = 0;
+        } else if (hours > 12) {
+            hour12 = hours - 12; 
         } else {
-            System.out.println(" AM");
+            hour12 = hours;
         }
-    }
+		 if (minutes < 10) {
+            System.out.println(hour12 + ":0" + minutes + " " + suffix);
+        } else {
+            System.out.println(hour12 + ":" + minutes + " " + suffix);
+}   
 
-}
+        }    
+              }          
+
