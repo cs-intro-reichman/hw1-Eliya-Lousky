@@ -10,7 +10,7 @@ public class FVCalc {
 
 		long rounded = Math.round(futurevalue);
 
-		System.out.println("After " + n + "years, $" + currentValue + " saved at " + rate + "%% will yield $" + rounded);
+		System.out.println("After " + n + "years, $" + currentValue + " saved at " + String.format("%.1f", rate) + "% will yield $" + rounded);
 	
 }
 }
