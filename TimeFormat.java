@@ -1,28 +1,24 @@
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class TimeFormat {
 	public static void main(String[] args) {
-		
-	     String  time = args[0]; 
-     
-        int h = Integer.parseInt("" + time.charAt(0) + time.charAt(1));
-        int m = Integer.parseInt("" + time.charAt(3) + time.charAt(4));
+		 String input = args[0]; 
 
-        String period = (h < 12) ? "AM" : "PM";
-      
-        h = h % 12;
-        if (h == 0) {
-            h = 12;
-        }
+        DateTimeFormatter inputFormat = DateTimeFormatter.ofPattern("HH:mm");
+        LocalTime time = LocalTime.parse(input, inputFormat);
+
+       
+        DateTimeFormatter hourFormat = DateTimeFormatter.ofPattern("h");
+        DateTimeFormatter minuteFormat = DateTimeFormatter.ofPattern("mm");
+        DateTimeFormatter ampmFormat = DateTimeFormatter.ofPattern("a");
+
     
-      
-        System.out.print(h + ":");
-        if (m < 10){
-             System.out.print("0");
-            }
-        System.out.print(m + " " + period + "\n");
+        System.out.print(time.format(hourFormat)); 
+        System.out.print(":");
+        System.out.print(time.format(minuteFormat)); 
+        System.out.print(" ");
+        System.out.println(time.format(ampmFormat)); 
     }
+
 }
-
-    
-
-    
