@@ -6,11 +6,12 @@ public class Bill3 {
 		String name2 = args[1];
 		String name3 = args[2];
 
+
 		int bill = Integer.parseInt(args[3]);
 
-	  double each = Math.ceil(bill / 3.0);
+		  double each = Math.ceil(bill / 3.0);
 
-		System.out.printf("Dear %s, %s, and %s: pay %.1f shekels each%n", name3, name2, name1, each);
+		System.out.println("Dear %s, %s, and %s: pay %.1f shekels each%n", name3, name2, name1, each);
 
 	
 	}

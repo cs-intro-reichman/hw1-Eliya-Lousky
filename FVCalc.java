@@ -8,10 +8,9 @@ public class FVCalc {
 		int n = Integer.parseInt(args[2]);
 		double futurevalue = (currentValue * Math.pow(1 + rate / 100.0, n));
 
-		long rounded = Math.round(fv);
-		
-		System.out.println("After " + n + " years, " + "$" + currentValue + " saved at 10.0%%  will yield "  + " $" + futurevalue);
+		long rounded = Math.round(futurevalue);
 
-
-	}
+		System.out.println("after " + n + "years, $" + currentValue + " saved at " + rate + "%% will yield $" + rounded);
+	
+}
 }
